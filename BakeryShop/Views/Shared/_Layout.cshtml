@@ -19,6 +19,7 @@
     @Html.Raw(JavaScriptSnippet.FullScript)
 </head>
 <body>
+    <div id="wrap">
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -41,11 +42,14 @@
     </nav>
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; 2017 - BakeryShop</p>
-        </footer>
     </div>
+        </div>
+    <footer class="container-fluid" id="footer">
+        <hr />
+        <div class="footer-text">
+            <p>&copy; 2017 - BakeryShop</p>
+        </div>
+    </footer>
 
     <environment names="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>

@@ -1,6 +1,16 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    height: 100%;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+#wrap {
+    min-height: 100%;
 }
 
 /* Wrapping element */
@@ -34,4 +44,132 @@ textarea {
     .carousel-caption {
         display: none;
     }
+}
+
+/*!
+ * Start Bootstrap - Shop Homepage (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+body {
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    margin-bottom: 60px; /* Required for footer 60px */
+    background-image: url('/images/pattern.png');
+    background-repeat: repeat;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+.slide-image {
+    width: 100%;
+}
+
+.carousel-holder {
+    margin-bottom: 30px;
+}
+
+.carousel-control,
+.item {
+    border-radius: 4px;
+}
+
+.caption {
+    height: 130px;
+    overflow: hidden;
+}
+
+    .caption h4 {
+        white-space: nowrap;
+    }
+
+.thumbnail img {
+    width: 100%;
+}
+
+.addToCart {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+    .thumbnail .caption-full {
+        padding: 9px;
+        color: #333;
+    }
+
+#footer {
+   /* margin: 50px 0; */
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+   margin-top: 30px;
+   height: 60px;
+}
+
+footer > hr {
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+}
+
+footer > .footer-text {
+    margin: 20px 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.navbar {
+    background-image: none;
+}
+
+.navbar-inverse {
+    background-color: #AAF0D1;
+    border-color: #663399;
+}
+
+.navbar-header .navbar-brand {
+    color: #663399;
+}
+
+.nav.navbar-nav.navbar-right li a {
+    color: white;
+    font-size: 1.2em;
+}
+
+.navbar .nav > li > a {
+    font-size: 1.2em;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    color: #663399;
+}
+
+.carousel .item {
+    height: 400px;
+}
+
+.item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 400px;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
+    background-color: #fcaeae !important;
+    border-color: #fba1a1 !important;
+}
+
+.btn {
+    background-color: #fcaeae !important;
+    border-color: #fba1a1 !important;
+}
+
+/* ------------------------------------------------------------------------------------------ */
+
+/* Pie List */
+
+.pie-list {
+    width: 100%;
 }

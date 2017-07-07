@@ -7,11 +7,16 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using BakeryShop.Models;
+using Microsoft.EntityFrameworkCore;
+using Npgsql.EntityFrameworkCore.PostgreSQL;
 
 namespace BakeryShop
 {
     public class Startup
     {
+        public IConfigurationRoot _configurationRoot;
+
         public Startup(IHostingEnvironment env)
         {
             var builder = new ConfigurationBuilder()
@@ -27,7 +32,19 @@ namespace BakeryShop
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            services.AddDbContext<AppDbContext>(options =>
+                options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
+
+            //services.addidentity()
+            //    .addentityframeworkstores()
+            //    .adddefaulttokenproviders();
+
+            services.AddEntityFrameworkNpgsql();
+
             // Add framework services.
+            services.AddTransient<ICategoryRepository, MockCategoryRepository>();
+            services.AddTransient<IPieRepository, MockPieRepository>();
             services.AddMvc();
         }
 
@@ -40,6 +57,7 @@ namespace BakeryShop
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseStatusCodePages();
                 app.UseBrowserLink();
             }
             else
